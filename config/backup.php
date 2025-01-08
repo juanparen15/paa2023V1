@@ -170,12 +170,12 @@ return [
 
             'from' => [
                 'address' => env('MAIL_FROM_ADDRESS', 'ticsistemasptoboy@gmail.com'),
-                'name' => env('MAIL_FROM_NAME', 'Alcaldía de Puerto Boyacá'),
+                'name' => env('MAIL_FROM_NAME', ''),
             ],
         ],
 
         'slack' => [
-            'webhook_url' => '',
+            'webhook_url' => env('SLACK_WEBHOOK_URL', ''),
 
             /*
              * If this is set to null the default channel of the webhook will be used.
