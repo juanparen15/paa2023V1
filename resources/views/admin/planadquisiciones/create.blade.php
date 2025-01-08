@@ -353,13 +353,13 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="created_at">Fecha de Creación:</label>
                                     <input type="date" disabled placeholder="Fecha de Creación" name="created_at"
                                         id="created_at" class="form-control" value="2025-01-01">
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                             {{-- <div class="col-md-4">
@@ -406,7 +406,7 @@
 @endsection
 @section('script')
 
-    {{-- {!! Html::script('adminlte/plugins/sweetalert2/sweetalert2.min.js') !!}
+    {!! Html::script('adminlte/plugins/sweetalert2/sweetalert2.min.js') !!}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
@@ -442,10 +442,6 @@
                         message: 'Por favor, indique si se requiere un proyecto.'
                     },
                     {
-                        id: 'codbpim',
-                        message: 'Por favor, ingrese el código BPIN.'
-                    },
-                    {
                         id: 'requipoai_id',
                         message: 'Por favor, indique si se requiere POAI.'
                     },
@@ -460,10 +456,6 @@
                     {
                         id: 'tipozona_id',
                         message: 'Por favor, seleccione el tipo de zona.'
-                    },
-                    {
-                        id: 'tipoproceso_id',
-                        message: 'Por favor, seleccione el tipo de proceso contractual.'
                     },
                     {
                         id: 'modalidade_id',
@@ -511,7 +503,7 @@
                 }
             });
         });
-    </script> --}}
+    </script>
 
     <!-- Select2 -->
     {!! Html::script('adminlte/plugins/select2/js/select2.full.min.js') !!}

@@ -125,7 +125,7 @@ class PlanadquisicioneController extends Controller
         $planadquisicione = Planadquisicione::create($request->all() + [
             'user_id' => auth()->user()->id,
             'slug' => $slugWithId,
-            'created_at' => '2025-01-01 00:00:00',
+            // 'created_at' => '2025-01-01 00:00:00',
         ]);
         return redirect()->route('planadquisiciones.agregar_producto', $planadquisicione->slug)
             ->with('flash', 'Plan de adquisiciones registrado correctamente');
@@ -224,14 +224,14 @@ class PlanadquisicioneController extends Controller
     // public function destroy(Planadquisicione $planadquisicion)
     // {
     //     $planadquisicion->delete();
-    //     return redirect()->route('planadquisiciones.index')->with('flash', 'eliminado');
+        // return redirect()->route('planadquisiciones.index')->with('flash', 'eliminado');
     // }
 
     public function destroy(Planadquisicione $planadquisicione)
     {
         try {
             $planadquisicione->delete();
-            return redirect()->route('planadquisiciones.index')->with('success', 'Registro eliminado correctamente.');
+            return redirect()->route('planadquisiciones.index')->with('flash', 'eliminado');
         } catch (\Exception $e) {
             return redirect()->route('planadquisiciones.index')->with('error', 'No se pudo eliminar el registro: ' . $e->getMessage());
         }
